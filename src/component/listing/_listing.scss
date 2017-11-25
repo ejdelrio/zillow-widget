@@ -23,12 +23,47 @@
 
       img {
         float: left;
-        width: 40%;
+        width: 30%;
         height: 15vh;
       }
+    }
 
-      div {
+    li div {
+      float: right;
+      width: 70%;
+      height: 20vh;
+
+      * {
+        font-family: $font;
+      }
+
+      h5 {
+        float: right;
+        width: 90%;
+        height: 1vh;
+        font-size: 1vh;
+        text-align: right;
+      }
+
+      h4 {
         float: left;
+        width: 90%;
+        height: 2.25vh;
+        font-size: 2.5vh;
+        color: #0474E4;
+        font-weight: bold;
+      }
+      h3 {
+        width: 90%;
+        height: 4.25vh;
+        font-size: 4.25vh;
+        float: left;
+      }
+
+      p {
+        float: left;
+        width: 90%;
+        height: 1vh;
       }
     }
   }

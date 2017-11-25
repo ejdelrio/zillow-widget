@@ -4,8 +4,28 @@ import React from 'react';
 
 class Listing extends React.Component {
   constructor (props) {
-    super(props);
+    super (props);
+
+    this.renderAddress = this.renderAddress.bind (this);
   }
+
+  renderAddress(address) {
+    if(!address) return [<h4></h4>, <h4></h4>];
+    let splitAddress = address.split(', ');
+    console.log(splitAddress)
+
+    let street = splitAddress.shift();
+    let region = splitAddress.join(', ');
+
+    return [<h4>{street}</h4>, <h4>{region}</h4>];
+
+  }
+
+  renderDetails(rooms, beds, sqft) {
+
+  }
+
+
 
   render() {
     console.log(this.props.data);
@@ -18,9 +38,9 @@ class Listing extends React.Component {
                 <img src={ele.thumb}/>
                 <div>
                   <h5>{ele.built ? `Built in ${ele.built}`: ''}</h5>
-                  <h4></h4>
-                  <h4></h4>
-                  <p>{ele.price}</p>
+                  {this.renderAddress(ele.address)}
+                  <h3>{`$${parseInt(ele.price).toLocaleString()}`}</h3>
+                  <p>{`${ele.beds} beds	• ${ele.baths} baths • ${ele.sqft} sq ft`}</p>
                 </div>
 
               </li>
