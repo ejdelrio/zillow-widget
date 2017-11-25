@@ -10,7 +10,15 @@ class Listing extends React.Component {
   render() {
     return (
       <section id={'listing'}>
+        <ul>
+          {this.props.data.map((ele, ind) => {
+            return(
+              <li>
 
+              </li>
+            )
+          })}
+        </ul>
       </section>
     )
   }
