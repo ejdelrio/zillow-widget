@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "Zillow",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -8,9 +8,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "watch": "webpack-dev-server --inline --hot",
-    "heroku-postbuild": "webpack -p --progress",
-    "test": "jest"
+    "watch": "webpack-dev-server --inline --hot"
   },
   "keywords": [],
   "author": "",
@@ -32,16 +30,8 @@
     "node-sass": "^4.5.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-google-button": "^0.3.0",
-    "react-google-login": "^2.9.3",
-    "react-iframe": "^1.0.7",
-    "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2",
     "sass-loader": "^6.0.6",
-    "socket.io-client": "^2.0.3",
-    "superagent": "^3.6.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.6",
