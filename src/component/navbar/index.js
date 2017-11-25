@@ -5,7 +5,9 @@ class NavBar extends React.Component {
   constructor (props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+
+    };
   }
 
   render () {
@@ -17,10 +19,10 @@ class NavBar extends React.Component {
             <button>Price</button>
           </li>
           <li>
-            <button>Price</button>
+            <button>Beds</button>
           </li>
           <li>
-            <button>Price</button>
+            <button>Sq. ft.</button>
           </li>
         </ul>
       </section>
