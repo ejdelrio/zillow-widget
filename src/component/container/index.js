@@ -11,6 +11,7 @@ for (let key in __BATMAN_DATA__) {
   let value = __BATMAN_DATA__[key];
   value.price = value.cost.replace(/,/g, "");
   value.sqft = value.sq_ft;
+  value.thumb = value.img;
 
   data.push(value);
 }
