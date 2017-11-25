@@ -6,9 +6,11 @@ import App from './component/app';
 import './style/main.scss'
 
 let store = createAppStore();
+
 let createApp = () => (
   <Provider store={store}>
     <App />
   </Provider>
 )
+
 ReactDom.render(createApp(), document.getElementById('root'));
