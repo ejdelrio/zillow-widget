@@ -36,8 +36,15 @@
         background: #87D300;
         font-family: $font;
         color: #FFFFFF;
+        cursor: pointer;
+        outline: none;
       }
 
+    }
+
+    .selected button {
+      background: #0474E4;
+      transition: 350ms all;
     }
   }
 }

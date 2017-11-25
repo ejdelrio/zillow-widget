@@ -6,8 +6,23 @@ class NavBar extends React.Component {
     super(props);
 
     this.state = {
-
+      priceClass: 'selected',
+      bedsClass: '',
+      sizeClass: ''
     };
+
+    this.buttonClick = this.buttonClick.bind(this);
+  }
+
+  buttonClick(buttonName) {
+    let newState = {...this.state};
+
+    for (let item in newState) {
+      if(item === buttonName) newState[item] = 'selected';
+      else newState[item] = '';
+    }
+    this.setState(newState);
+
   }
 
   render () {
@@ -15,14 +30,20 @@ class NavBar extends React.Component {
       <section id={'navbar'}>
         <h1>Awesome Listing Widget</h1>
         <ul>
-          <li>
-            <button>Price</button>
+          <li className={this.state.priceClass}>
+            <button onClick={() => this.buttonClick('priceClass')}>
+              Price
+            </button>
           </li>
-          <li>
-            <button>Beds</button>
+          <li className={this.state.bedsClass}>
+            <button onClick={() => this.buttonClick('bedsClass')}>
+              Beds
+            </button>
           </li>
-          <li>
-            <button>Sq. ft.</button>
+          <li className={this.state.sizeClass}>
+            <button onClick={() => this.buttonClick('sizeClass')}>
+              Sq. ft.
+            </button>
           </li>
         </ul>
       </section>
