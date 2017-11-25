@@ -17,11 +17,20 @@ class Listing extends React.Component {
     let street = splitAddress.shift();
     let region = splitAddress.join(', ');
 
+    if(street.length > 19) street = street.slice(0, 19) + '...';
+
     return [<h4>{street}</h4>, <h4>{region}</h4>];
 
   }
 
-  renderDetails(rooms, beds, sqft) {
+  renderDetails(ele) {
+    let {beds, baths, sqft} = ele;
+    let output = beds ? `${beds} beds` : '';
+
+    if(baths) output += output ? ` • ${baths} baths` : `${baths} baths`;
+    if(sqft) output += output ? ` • ${sqft} sq ft` : `${sqft} sq ft`;
+
+    return output;
 
   }
 
@@ -35,14 +44,15 @@ class Listing extends React.Component {
           {this.props.data.map((ele, ind) => {
             return(
               <li key={ind}>
-                <img src={ele.thumb}/>
-                <div>
-                  <h5>{ele.built ? `Built in ${ele.built}`: ''}</h5>
-                  {this.renderAddress(ele.address)}
-                  <h3>{`$${parseInt(ele.price).toLocaleString()}`}</h3>
-                  <p>{`${ele.beds} beds	• ${ele.baths} baths • ${ele.sqft} sq ft`}</p>
-                </div>
-
+                <a href={ele.url}>
+                  <img src={ele.thumb}/>
+                  <div>
+                    <h5>{ele.built ? `Built in ${ele.built}`: ''}</h5>
+                    {this.renderAddress(ele.address)}
+                    <h3>{`$${parseInt(ele.price).toLocaleString()}`}</h3>
+                    <p>{this.renderDetails(ele)}</p>
+                  </div>
+                </a>
               </li>
             )
           })}

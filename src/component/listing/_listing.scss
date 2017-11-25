@@ -13,24 +13,26 @@
 
     li {
       width: 47.5%;
-      height: 21vh;
+      height: 20vh;
       background: white;
       display: inline-block;
       float: left;
       margin-left: 1.5%;
-      margin-top: 1vh;
+      margin-top: 1.5vh;
       outline: 1px solid lightgrey;
 
       img {
         float: left;
-        width: 30%;
-        height: 15vh;
+        width: 38%;
+        height: 18vh;
+        margin-top: 1vh;
+        margin-left: 2%;
       }
     }
 
     li div {
       float: right;
-      width: 70%;
+      width: 60%;
       height: 20vh;
 
       * {
@@ -43,27 +45,37 @@
         height: 1vh;
         font-size: 1vh;
         text-align: right;
+        margin-right: 2%;
+        margin-top: 1vh;
       }
 
       h4 {
         float: left;
         width: 90%;
-        height: 2.25vh;
-        font-size: 2.5vh;
+        height: 1.35vw;
+        font-size: 1.35vw;
         color: #0474E4;
         font-weight: bold;
+        margin-left: 2%;
+        margin-top: 1vh;
       }
+   
       h3 {
         width: 90%;
         height: 4.25vh;
-        font-size: 4.25vh;
+        font-size: 3.5vw;
         float: left;
+        margin-left: 2%;
+        margin-top: 1vh;
       }
 
       p {
         float: left;
         width: 90%;
-        height: 1vh;
+        height: 1.15vw;
+        margin-left: 2%;
+        margin-top: 2vh;
+        font-size: 1.15vw;
       }
     }
   }
