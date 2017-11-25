@@ -8,6 +8,7 @@ class Listing extends React.Component {
   }
 
   render() {
+    console.log(this.props.data);
     return (
       <section id={'listing'}>
         <ul>
