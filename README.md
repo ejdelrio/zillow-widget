@@ -10,3 +10,8 @@ install all dependencies. This part might take second depending on your internet
 Now that you've done that. You can type 'npm run watch'. This will initiate a server without creating an entire build
 on your machine. You can then navigate to localhost:8080 to check out the app.
 
+Thanks for looking at it :D
+
+The github can be found hither:
+ 
+https://github.com/ejdelrio/zillow-widget
