@@ -35,6 +35,7 @@
         border-radius: 5px;
         background: #87D300;
         font-family: $font;
+        font-size: 2vh;
         color: #FFFFFF;
         cursor: pointer;
         outline: none;
@@ -45,6 +46,17 @@
     .selected button {
       background: #0474E4;
       transition: 350ms all;
+    }
+  }
+}
+@media (max-width: 900px) and (orientation:landscape) {
+  #navbar {
+    h1 {
+      font-size: 4vh;
+      height: 4vh;
+    }
+    ul li button {
+      border-radius: 2.5px;
     }
   }
 }
