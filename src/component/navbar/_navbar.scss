@@ -39,6 +39,11 @@
         color: #FFFFFF;
         cursor: pointer;
         outline: none;
+        transition: 350ms all;
+
+        &:hover {
+          background: #559100;
+        }
       }
 
     }
@@ -46,6 +51,9 @@
     .selected button {
       background: #0474E4;
       transition: 350ms all;
+      &:hover {
+        background: #0474E4;
+      }
     }
   }
 }

@@ -21,6 +21,10 @@
       margin-top: 1.5vh;
       outline: 1px solid lightgrey;
 
+      &:hover {
+        outline: 1px solid #0474E4;
+      }
+
       img {
         float: left;
         width: 38%;
