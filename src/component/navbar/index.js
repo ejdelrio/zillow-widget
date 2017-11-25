@@ -15,14 +15,18 @@ class NavBar extends React.Component {
   }
 
   buttonClick(buttonName) {
-    let newState = {...this.state};
+    let newState = {...this.state}; //Copies the current state;
 
     for (let item in newState) {
+      /*Iterates through the keys of the state.
+      * If the current key matches the button, than the buttons class will change to 'selected'
+      * while the other buttons will have no class
+      * */
       if(item === buttonName) newState[item] = 'selected';
       else newState[item] = '';
     }
     this.setState(newState);
-    this.props.buttonCick(buttonName);
+    this.props.buttonCick(buttonName);//Passes the clicked button to the parent container
   }
 
   render () {

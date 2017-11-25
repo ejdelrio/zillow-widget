@@ -10,9 +10,10 @@ class Listing extends React.Component {
   }
 
   renderAddress(address) {
+    //Splits the address into street address and city, state and zip.
+    //Street address is compressed if too long
     if(!address) return [<h4></h4>, <h4></h4>];
     let splitAddress = address.split(', ');
-    console.log(splitAddress)
 
     let street = splitAddress.shift();
     let region = splitAddress.join(', ');
@@ -24,6 +25,7 @@ class Listing extends React.Component {
   }
 
   renderDetails(ele) {
+    //Consolidates bed, sqft and baths into a single string.
     let {beds, baths, sqft} = ele;
     let output = beds ? `${beds} beds` : '';
 
@@ -37,11 +39,13 @@ class Listing extends React.Component {
 
 
   render() {
-    console.log(this.props.data);
     return (
       <section id={'listing'}>
         <ul>
+
           {this.props.data.map((ele, ind) => {
+            //Maps through data creating an li element for each listing.
+            //values of each listing populate the internal elements of the li
             return(
               <li key={ind}>
                 <a href={ele.url}>
